@@ -13,15 +13,20 @@ public class Sorts {
             lista.add(tmp);
         }
         List<Integer> InsertionTesti = new ArrayList<>(lista);
-        for (int i = 0; i < taulukko.length ; i++){
-            System.out.print(taulukko[i]+", ");
+        int[] InsertionTaulukko = taulukko;
+
+        System.out.println("Alkuperäinen");
+        for (int i : taulukko){
+            System.out.print(i+", ");
         }
-        insertionSort(taulukko);
+
+        insertionSort(InsertionTaulukko);
         System.out.println();
         System.out.println("Insertion Sort Taulukko (Array)");
-        for (int i = 0; i < taulukko.length ; i++){
-            System.out.print(taulukko[i] + ", ");
+        for (int i : InsertionTaulukko){
+            System.out.print(i+ ", ");
         }
+
         insertionSortArrayList(InsertionTesti);
         System.out.println();
         System.out.println("Insertion Sort Lista (Arraylist)");
